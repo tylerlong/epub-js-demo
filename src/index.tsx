@@ -22,6 +22,10 @@ class App extends React.Component {
       width: '800',
     });
     rendition.display();
+
+    rendition.on('rendered', (section: any) => {
+      console.log(section.href);
+    });
   }
 }
 
