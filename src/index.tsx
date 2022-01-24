@@ -16,6 +16,7 @@ class App extends React.Component {
     const book = (global as any).ePub(
       'https://s3.amazonaws.com/epubjs/books/moby-dick/OPS/package.opf'
     );
+
     const rendition = book.renderTo(document.body, {
       manager: 'continuous',
       flow: 'scrolled',
@@ -24,7 +25,10 @@ class App extends React.Component {
     rendition.display();
 
     rendition.on('rendered', (section: any) => {
-      console.log(section.href);
+      console.log(section.href); // this is the location
+      // rendition.display(section.href) to go to the current location
+      document.title = book.package.metadata.title;
+      console.log(book.package.metadata.title);
     });
   }
 }
