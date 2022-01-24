@@ -19,7 +19,7 @@ class App extends React.Component {
     const rendition = book.renderTo(document.body, {
       manager: 'continuous',
       flow: 'scrolled',
-      width: '60%',
+      width: '800',
     });
     rendition.display();
   }
