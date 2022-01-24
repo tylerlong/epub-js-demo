@@ -16,6 +16,10 @@ const config: Configuration = {
           loader: 'ts-loader',
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   plugins: [
