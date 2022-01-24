@@ -5,7 +5,7 @@ const config: Configuration = {
   devtool: 'source-map',
   mode: 'development',
   entry: {
-    index: './src/index.ts',
+    index: './src/index.tsx',
   },
   module: {
     rules: [
